@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>آيات | القرآن الكريم - قراءة، استماع، تدبر</title>
+    <script>
+      // Global safety guard for restrictive iframe sandboxes where window.fetch has only a getter
+      (function() {
+        try {
+          var _origFetch = typeof window.fetch === 'function' ? window.fetch.bind(window) : null;
+          var _currentFetch = _origFetch;
+          Object.defineProperty(window, 'fetch', {
+            get: function() {
+              return _currentFetch;
+            },
+            set: function(val) {
+              _currentFetch = val;
+            },
+            configurable: true,
+            enumerable: true
+          });
+        } catch (e) {
+          // Fallback if defineProperty fails
+          try {
+            var proto = Object.getPrototypeOf(window);
+            if (proto) {
+              var desc = Object.getOwnPropertyDescriptor(proto, 'fetch');
+              if (desc && desc.configurable) {
+                var _pFetch = window.fetch;
+                Object.defineProperty(proto, 'fetch', {
+                  get: function() { return _pFetch; },
+                  set: function(v) { _pFetch = v; },
+                  configurable: true,
+                  enumerable: true
+                });
+              }
+            }
+          } catch (err) {}
+        }
+      })();
+    </script>
+    <meta name="description" content="تطبيق آيات التفاعلي للقرآن الكريم: تلاوات بأصوات أشهر القراء، تفاسير، أذكار، تتبع الختمات، وإشارات مرجعية." />
+    <meta name="theme-color" content="#064e3b" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Amiri+Quran&family=Amiri:ital,wght@0,400;0,700;1,400&family=Cairo:wght@300;400;500;600;700;800&family=Scheherazade+New:wght@400;600;700&display=swap" rel="stylesheet" />
+    <meta property="og:title" content="آيات | القرآن الكريم" />
+    <meta property="og:description" content="تطبيق ويب تفاعلي وتدبري شامل للقرآن الكريم" />
+    <meta property="og:type" content="website" />
+  </head>
+  <body class="bg-emerald-950/5 text-slate-900 antialiased selection:bg-emerald-200 selection:text-emerald-900">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

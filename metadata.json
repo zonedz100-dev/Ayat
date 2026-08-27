@@ -1,0 +1,6 @@
+{
+  "name": "آيات - القرآن الكريم",
+  "description": "تطبيق ويب تفاعلي وتدبري شامل لقراءة واستماع القرآن الكريم، مع تلاوات متعددة وتفاسير وإشارات مرجعية",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
