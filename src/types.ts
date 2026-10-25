@@ -1,4 +1,4 @@
-export type ViewMode = 'surahs' | 'juz' | 'reader' | 'reciters' | 'azkar' | 'bookmarks' | 'khatma';
+export type ViewMode = 'surahs' | 'juz' | 'reader' | 'reciters' | 'azkar' | 'bookmarks' | 'khatma' | 'learning';
 
 export interface SurahMeta {
   number: number;
@@ -246,4 +246,3 @@ export interface UserPrayerLocationType {
   calculationMethod: number;
   juristicMethod: 'standard' | 'hanafi';
 }
-

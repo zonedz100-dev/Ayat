@@ -1,5 +1,5 @@
 import React from 'react';
-import { BookOpen, Layers, BookmarkCheck, Compass } from 'lucide-react';
+import { BookOpen, Layers, BookmarkCheck, Compass, GraduationCap } from 'lucide-react';
 import { ViewMode } from '../types';
 
 interface BottomNavProps {
@@ -17,7 +17,8 @@ export const BottomNav: React.FC<BottomNavProps> = ({
     { id: 'surahs' as ViewMode, label: 'السور', icon: BookOpen },
     { id: 'juz' as ViewMode, label: 'الأجزاء', icon: Layers },
     { id: 'azkar' as ViewMode, label: 'الأذكار', icon: Compass },
-    { id: 'khatma' as ViewMode, label: 'الختمة', icon: BookmarkCheck, badge: bookmarksCount }
+    { id: 'khatma' as ViewMode, label: 'الختمة', icon: BookmarkCheck, badge: bookmarksCount },
+    { id: 'learning' as ViewMode, label: 'تعلّم', icon: GraduationCap }
   ];
 
   const handleTabClick = (tabId: ViewMode) => {
@@ -66,4 +67,3 @@ export const BottomNav: React.FC<BottomNavProps> = ({
     </nav>
   );
 };
-

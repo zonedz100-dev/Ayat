@@ -8,3 +8,17 @@ createRoot(document.getElementById('root')!).render(
     <App />
   </StrictMode>,
 );
+
+if (import.meta.env.PROD && 'serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js')
+      .then(() => {
+        if (!navigator.serviceWorker.controller) {
+          navigator.serviceWorker.addEventListener('controllerchange', () => window.location.reload(), { once: true });
+        }
+      })
+      .catch((error: unknown) => {
+        console.error('تعذّر تسجيل عامل الخدمة للتشغيل دون اتصال:', error);
+      });
+  });
+}

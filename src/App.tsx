@@ -71,6 +71,7 @@ import { TaatakDeedsModal } from './components/TaatakDeedsModal';
 import { RamadanImsakiyaModal } from './components/RamadanImsakiyaModal';
 import { AsmaaAllahModal } from './components/AsmaaAllahModal';
 import { IslamicArticlesAndDuasModal } from './components/IslamicArticlesAndDuasModal';
+import { LearningHub } from './components/LearningHub';
 
 export default function App() {
   // Navigation & View States
@@ -614,6 +615,8 @@ export default function App() {
             initialCategory={initialAzkarCategory}
           />
         )}
+
+        {currentView === 'learning' && <LearningHub />}
 
       </main>
 
