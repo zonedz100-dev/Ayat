@@ -13,7 +13,8 @@ import {
   Bell,
   Layers,
   Compass,
-  Flame
+  Flame,
+  GraduationCap
 } from 'lucide-react';
 import { Reciter, ReadingSettings, ViewMode } from '../types';
 
@@ -161,6 +162,18 @@ export const Navbar: React.FC<NavbarProps> = ({
                     {bookmarksCount}
                   </span>
                 )}
+              </button>
+              <button
+                id="nav-learning-btn"
+                onClick={() => onSelectView('learning')}
+                className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-all cursor-pointer flex items-center gap-1.5 ${
+                  currentView === 'learning'
+                    ? 'text-white bg-[#1a1a1a] border border-[#333] shadow-xs'
+                    : 'text-slate-400 hover:text-slate-200 hover:bg-[#111]'
+                }`}
+              >
+                <GraduationCap className="h-4 w-4" />
+                <span>التعلّم</span>
               </button>
             </nav>
           </div>
